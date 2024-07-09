@@ -1,0 +1,4 @@
+{
+    "admin": ["view_menu", "view_report", "manage_users"],
+    "user": ["view_menu", "view_report"]
+}

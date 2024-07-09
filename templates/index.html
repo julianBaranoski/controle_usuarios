@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}</h2>
+    <ul>
+        {% if 'view_menu' in permissions %}
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        {% endif %}
+        {% if 'view_report' in permissions %}
+        <li><a href="{{ url_for('report') }}">Report</a></li>
+        {% endif %}
+        {% if 'manage_users' in permissions %}
+        <li><a href="{{ url_for('manage_users') }}">Manage Users</a></li>
+        {% endif %}
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</body>
+</html>
